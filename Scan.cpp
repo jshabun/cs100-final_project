@@ -3,10 +3,12 @@
 #include "base.hpp"
 #include "Scan.hpp"
 #include <iostream>
+#include <map>
+#include <string>
 #include <fstream>
 #include <sstream>
 #include <stdlib.h>
-#include <boost/tokenizer.hpp>
+#include "boost/boost/tokenizer.hpp"
 
 using namespace std;
 using namespace boost;
@@ -70,7 +72,7 @@ void Scan::scanMovies() {
 
 			for(int i =0; i < start->size(); i++){
             	if(start->at(i) != ','){
-                	genre =+  start->at(i);
+                	genre +=  start->at(i);
             	}
             	if(start->at(i) == ','){
                 	genres.push_back(genre);
@@ -101,9 +103,8 @@ void Scan::scanMovies() {
  			genres.clear();
 	        movTitle = "";
     	    date = 0;
-    	    rating = 0.0;
-
-			delete curMovie;
+    	    rating = 0;
+		
     		}
         
     	myCSV.close();

@@ -1,4 +1,6 @@
-#include "menu.h"
+#include "Scan.hpp"
+#include "display.hpp"
+#include "menu.hpp"
 #include <iostream>
 #include <string>
 #include <map>
@@ -35,10 +37,12 @@ void option1(Scan* title) {
     getline(cin, movieTitle);
 
     if (title->isMovie(movieTitle)) {
+		cout << "=======================================================";
         recommend(title->getMovies(), movieTitle, title->getMovMap());
+		cout << "=======================================================" << endl;
     } else {
         cout << "The movie you entered does not exist in the database.\nTry again with one that does."
-    }
+   ; }
 }
 
 // by genre
@@ -67,14 +71,15 @@ void option4(Scan* title) {
 }
 
 // by date
-void option4(Scan* title) {
+void option5(Scan* title) {
     int releaseDate = 0;
     cout << endl << "Enter release date below: " << endl;
     cin >> releaseDate;
-    title->setFilters(new ListTenRecent(year));
+    title->setFilters(new ListTenRecent(releaseDate));
     title->sort();
 }
 
 int quit() {
-    return 0;
+    cout << "Goodbye" << endl;
+	exit(0);
 }
