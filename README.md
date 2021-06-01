@@ -36,3 +36,25 @@ Due to the nature of our project, we chose strategy pattern as a way of managing
 ![Composite](/images/composite_pattern.jpg)
 
 We will be using the composite pattern for our project because we will have different aspects of movies implemented. These different aspects will be implemented as composites and will be able to store the movie title, year of release, director, genre, and rating through inheritance. Additionally, users will be able to search for movie recommendations based on these composites. This development will then allow the user to organize their movie recommendations using the different inherited functions within a sorter function.
+
+## Installation & Usage
+### Screenshots
+![sc1](/images/sc1.jpg)
+![sc2](/images/sc2.jpg)
+![sc3](/images/sc3.jpg)
+![sc4](/images/sc4.jpg)
+![sc5](/images/sc5.jpg)
+
+### Instructions
+1. To use this program, it requires a few simple requriements to be installed and that's it.
+2. Clone this repository recursively (it should include googletest).
+3. This program also requires the `boost` library. It can either be cloned from my repository [here](https://github.com/jshabun/boost.git) or downloaded from the official boost website.
+4. In order to run, simply run `cmake .` or if on hummer `cmake3 .`
+5. Then compile with `make`.
+6. You should have your compiled files ready now. To run the tests simply type `./test`. To run the program run `./recommend`.
+7. Choose an option from the menu and follow the prompts. The program quits when you type `Q` or `q` as said in the program menu.
+
+### Tesing & Validation
+* To test the program, we created specialized unit tests to test the most important parts of the program. We made sure all of them passed before proceeding on working on other items. We made sure to test after every change. To check the tests you simply run `./test` after compiling with cmake. We also made sure to check the valgrind report (depicted below) by running `valgrind ./test`. 
+
+![valgrind](/images/valgrind.jpg)
