@@ -15,6 +15,7 @@ Creating a movie recommender seemed interesting to us due to our profound love o
 * `Git/Github` - git is a local version control program that interfaces with Github, a remote repository.
 * `GoogleTest` - a testing framework for C++ code
 * `CMake`- allows for easier compilation and testing
+* `boost` - a c++ library used for extending c++ capabilites. used in this program for parsing csv file data.
 
 ### I/O:
 * `input`: movie title, genre, director, release date, rating
